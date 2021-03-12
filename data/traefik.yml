@@ -42,3 +42,14 @@ certificatesResolvers:
       httpChallenge:
         entryPoint: web
 
+  le-dns:
+    acme:
+      email: admin@krasnoevino.ga
+      storage: acme.json
+      keyType: EC384
+      dnsChallenge:
+        provider: acme-dns
+        resolvers:
+          - "1.1.1.1:53"
+          - "1.0.0.1:53"
+
