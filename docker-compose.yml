@@ -14,7 +14,7 @@ services:
     volumes:
       # So that Traefik can listen to the Docker events
       - /etc/localtime:/etc/localtime:ro
-      - /var/run/docker.sock:/var/run/docker.sock:r
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./data/traefik.yml:/traefik.yml:ro
       - ./data/acme.json:/acme.json
       # Add folder with dynamic configuration yml
